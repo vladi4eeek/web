@@ -1,5 +1,4 @@
 body {
-     
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -20,11 +19,10 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-.header-title {
-align-items: center;
-text-align: center;
- 
 
+.header-title {
+    align-items: center;
+    text-align: center;
 }
 
 .logo img {
@@ -43,7 +41,71 @@ nav ul li {
     display: inline;
     margin-right: 15px;
 }
+body.body-bg {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: Arial, sans-serif;
+}
 
+.header-bg {
+    background-color: #990000; /* Dark red background */
+    padding: 20px;
+    text-align: center;
+}
+
+.header-title {
+    color: #fff; /* White text */
+    margin: 0;
+}
+
+.navigationlist {
+    background-color: #333; /* Dark gray background */
+    padding: 10px 0;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu-item {
+    color: #fff; /* White text */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.menu-item:hover {
+    background-color: #990000; /* Dark red background on hover */
+    transition: background-color 0.3s ease;
+}
+
+.parallax {
+    position: relative;
+    height: 600px; /* Increased height for longer parallax effect */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.parallax-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff; /* White text */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.footer-bg {
+    background-color: #990000; /* Dark red background */
+    text-align: center;
+    padding: 20px;
+    color: #fff; /* White text */
+}
 nav ul li a {
     color: white;
     text-decoration: none;
@@ -54,14 +116,11 @@ nav ul li a:hover {
     background-color: #555;
     border-radius: 5px;
 }
-.parallax{
 
-    background-size: cover; 
+.parallax {
+    background-size: cover;
     background-attachment: fixed;
     height: 100vh;
-
-    
-
 }
 
 footer {
@@ -71,4 +130,42 @@ footer {
     padding: 1em 0;
     position: relative;
     width: 100%;
+}
+
+/* Медіа-запит для ширини екрану до 768 пікселів */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .logo img {
+        margin: 0 auto 15px auto;
+        width: 80px;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+        height: 50vh;
+    }
+
+    #image1 { 
+        background-image: url(images/dontfullgta.WebP);
+    }
+    #image2 {
+        background-image: url(images/dontfullpunk.WebP);
+    }
+    #image3 {
+        background-image: url(images/dontfull.WebP);
+    }
 }

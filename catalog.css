@@ -14,15 +14,14 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 1em 0;
-    text-align: center;
+    padding: 1em 2em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid #444;
 }
 
 .logo img {
-    margin-left: 15px;
     width: 100px;
     height: auto;
 }
@@ -31,22 +30,22 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin-right: 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
     background-color: #555;
-    border-radius: 5px;
 }
 
 main {
@@ -54,7 +53,8 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     flex: 1;
 }
 
@@ -64,20 +64,6 @@ h1 {
     text-align: center;
 }
 
-p {
-    margin-bottom: 1em;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: relative;
-    width: 100%;
-}
-
-/* Стилі для каталогу ігор */
 .game-catalog {
     display: flex;
     flex-wrap: wrap;
@@ -87,11 +73,13 @@ footer {
 
 .game-item {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     overflow: hidden;
     max-width: 300px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1em;
 }
 
 .game-item img {
@@ -108,11 +96,14 @@ footer {
     padding: 0 1em 1em;
 }
 
-/* Стилі для кнопки "Більше ключів" */
+.game-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
 .load-more {
     text-align: center;
-    margin-top: 77
-px;
+    margin-top: 20px;
 }
 
 .load-more button {
@@ -123,9 +114,109 @@ px;
     font-size: 1.2em;
     border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .load-more button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    width: 100%;
+    border-top: 2px solid #444;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+#price {
+    margin: 15px;
+}
+form fieldset {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input[type="text"], form input[type="email"], form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    align-items: center;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+#loadmore {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    position: relative;
+    /* z-index: 1000; */
+}
+
+/* Медіа-запит для ширини екрану до 768 пікселів */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+    }
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+
+    }
+
+    .parallax {
+        background-attachment: scroll;
+        height: 50vh;
+        padding: 50px 0;
+    }
+
+    .parallax {
+        background-attachment: scroll;
+        height: 50vh;
+        padding: 50px 0;
+    }
 }

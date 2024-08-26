@@ -4,59 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог - Dubsell</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalog.css">
 </head>
-<body>
+<body id="games">
     <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Dubsell Logo">
+        <div class="header-content">
+            <!-- <div class="logo">
+                <img src="images/logo.WebP" alt="Dubsell Logo">
+            </div> -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="reviews.html">Відгуки</a></li>
+                    <li><a href="support.html">Підтримка Користувачів</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">Про Нас</a></li>
+                    <li><a href="showcase.html">Вітрина</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="reviews.html">Відгуки</a></li>
-                <li><a href="support.html">Підтримка Користувачів</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="about.html">Про Нас</a></li>
-                <li><a href="showcase.html">Вітрина</a></li>
-            </ul>
-        </nav>
     </header>
-    <main>
-        <h1>Каталог Ігор</h1>
-        <div class="game-catalog">
-            <div class="game-item">
-                <img src="images/key.png" alt="The Legend of Zelda: Breath of the Wild">
-                <h2>The Legend of Zelda: Breath of the Wild</h2>
-                <p>Відкрийте для себе новий світ в цій епічній грі від Nintendo.</p>
-            </div>
-            <div class="game-item">
-                <img src="images/key.png" alt="God of War">
-                <h2>God of War</h2>
-                <p>Приєднайтесь до Кратоса в його пригоді у світі скандинавської міфології.</p>
-            </div>
-            <div class="game-item">
-                <img src="images/key.png" alt="Red Dead Redemption 2">
-                <h2>Red Dead Redemption 2</h2>
-                <p>Пориньте в атмосферу Дикого Заходу разом з Артуром Морганом.</p>
-            </div>
-            <div class="game-item">
-                <img src="images/key.png" alt="Cyberpunk 2077">
-                <h2>Cyberpunk 2077</h2>
-                <p>Досліджуйте футуристичне місто Найт-Сіті в ролі Ві.</p>
-            </div>
-            <div class="game-item">
-                <img src="images/key.png" alt="Minecraft">
-                <h2>Minecraft</h2>
-                <p>Будуйте, досліджуйте та виживайте в безмежному світі Minecraft.</p>
-            </div>
+    <section id="modelSection" class="content">
+            <div id="game-catalog" class="game-catalog">
+                <!-- Ігрові елементи -->
+                <div class="game-item">
+                    <img src="images/key.WebP" alt="The Legend of Zelda: Breath of the Wild">
+                    <h2>The Legend of Zelda: Breath of the Wild</h2>
+                    <p>Відкрийте для себе новий світ в цій епічній грі від Nintendo.</p>
+                    <p>Ціна: 449 грн</p>
+                </div>
+                <div class="game-item">
+                    <img src="images/key.WebP" alt="God of War">
+                    <h2>God of War</h2>
+                    <p>Приєднайтесь до Кратоса в його пригоді у світі скандинавської міфології.</p>
+                    <p>Ціна: 999 грн</p>
+                </div>
+                <div class="game-item">
+                    <img src="images/key.WebP" alt="Red Dead Redemption 2">
+                    <h2>Red Dead Redemption 2</h2>
+                    <p>Пориньте в атмосферу Дикого Заходу разом з Артуром Морганом.</p>
+                    <p>Ціна: 1999 грн</p>
+                </div>
+                <div class="game-item">
+                    <img src="images/key.WebP" alt="Cyberpunk 2077">
+                    <h2>Cyberpunk 2077</h2>
+                    <p>Досліджуйте футуристичне місто Найт-Сіті в ролі Ві.</p>
+                    <p>Ціна: 3999 грн</p>
+                </div>
+                <div class="game-item">
+                    <img src="images/key.WebP" alt="Minecraft">
+                    <h2>Minecraft</h2>
+                    <p>Будуйте, досліджуйте та виживайте в безмежному світі Minecraft.</p>
+                    <p>Ціна: 950 грн</p>
+                </div>
         </div>
-        <div class="load-more">
-            <button id="loadMore">Більше ключів</button>
+       
+    </section>
+
+        <form id="consForm" action="/submit" method="post" enctype="multipart/form-data">
+            <label for="title">Назва:</label>
+            <input type="text" id="title" name="title" required>
+        
+            <label id="price" for="price">Ціна:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+        
+            <label for="description">Опис:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+        
+            <button id="upload" type="submit">Зберегти</button>
+        </form>
+        <div>
+            <button id="loadMore" type="button">Більше ключів</button>
         </div>
-    </main>
+
     <footer>
         <p>&copy; 2024 Dubsell</p>
     </footer>
+    <script src="client.js"></script>
 </body>
 </html>

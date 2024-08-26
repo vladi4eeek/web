@@ -126,3 +126,65 @@ footer {
 .feature p {
     font-size: 1em;
 }
+
+/* Медіа-запит для ширини екрану до 768 пікселів */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+    }
+
+    .logo img {
+        margin: 0 auto 15px auto;
+        width: 80px;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    main {
+        padding: 1em;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .hero {
+        padding: 3em 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .feature {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+
+    .feature h2 {
+        font-size: 1.3em;
+    }
+
+    .feature p {
+        font-size: 0.9em;
+    }
+}

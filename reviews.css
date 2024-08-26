@@ -22,6 +22,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -85,4 +86,38 @@ footer {
 
 .review strong {
     font-weight: bold;
+}
+
+/* Адаптивні стилі для ширини екрану 768 пікселів і менше */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    main {
+        padding: 1em;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .review h2 {
+        font-size: 1.2em;
+    }
+
+    .review {
+        padding-bottom: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    footer {
+        padding: 0.5em 0;
+    }
 }
